@@ -1,24 +1,14 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { Container } from 'semantic-ui-react'
+import Dashboard from './components/DashBoard/Dashboard';
+import trackData from "./db.json"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link App-logo"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid>
+      <Dashboard data={trackData} />
+    </Container>
   );
 }
 
