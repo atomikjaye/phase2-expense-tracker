@@ -12,7 +12,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 
-function AddForm() {
+function AddForm({ onNewTrans }) {
+
+
+
+
   const [date, setDate] = useState(new Date())
   const [company, setCompany] = useState("")
   const [amount, setAmount] = useState(0)
@@ -22,19 +26,38 @@ function AddForm() {
   const [notes, setNotes] = useState('')
   // const [tags, setTags] = useState('')
 
+  // https://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
+  const formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 
   function handleSubmit(e) {
     e.preventDefault()
 
     const newTransaction = {
       date: date,
-      amount: amount,
+      amount: parseFloat(amount),
       account: account,
       category: category,
       type: type,
       notes: notes
     }
+
+    fetch(`http://localhost:3001/transactions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTransaction)
+    })
+      .then(r => r.json())
+      .then(data => console.log(data))
+
     console.log("New Trans", newTransaction)
+  }
+
+  function addNewTransaction() {
   }
 
   // have to use semantic's data object
