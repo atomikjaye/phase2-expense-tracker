@@ -5,5 +5,106 @@
   "expenses": {
     "total": 8500
   },
-  "transactions": []
+  "transactions": [
+    {
+      "date": "2022-06-16T07:26:45.000Z",
+      "amount": 10.84,
+      "company": "Wawa",
+      "account": "tdbank",
+      "category": "Social",
+      "type": "expenses",
+      "notes": "Hoagie",
+      "id": 1
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 50.69,
+      "company": "Burlington Coat Factory",
+      "account": "tdbank",
+      "category": "Clothing",
+      "type": "expenses",
+      "notes": "Jogging Outfit",
+      "id": 2
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 5.44,
+      "company": "ICEE & Friends",
+      "account": "chase",
+      "category": "Social",
+      "type": "expenses",
+      "notes": "Ice Cream with friends!",
+      "id": 3
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 800.2,
+      "company": "University of Google",
+      "account": "chase",
+      "category": "Student Loans",
+      "type": "expenses",
+      "notes": "Moneyyyyyyyyy leaves meee",
+      "id": 4
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 1000.21,
+      "company": "Jack's Auto Shop",
+      "account": "chase",
+      "category": "Car Maintenance",
+      "type": "expenses",
+      "notes": "Car Repair",
+      "id": 5
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 9000,
+      "company": "Bridal Shower",
+      "account": "tdbank",
+      "category": "Gifts",
+      "type": "income",
+      "notes": "Bridal Shower Gifts",
+      "id": 6
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 1128,
+      "company": "Amazon",
+      "account": "tdbank",
+      "category": "Amazon",
+      "type": "income",
+      "notes": "Overtime @ Amazon",
+      "id": 7
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 13.99,
+      "company": "Hulu",
+      "account": "tdbank",
+      "category": "Subscriptions",
+      "type": "expenses",
+      "notes": "",
+      "id": 8
+    },
+    {
+      "date": "2022-06-10T07:26:45.000Z",
+      "amount": 20,
+      "company": "Atomikee",
+      "account": "tdbank",
+      "category": "Etsy",
+      "type": "income",
+      "notes": "Sold a Plushie",
+      "id": 9
+    },
+    {
+      "date": "2022-06-30T07:59:57.869Z",
+      "company": "Job Lot",
+      "amount": 19.99,
+      "account": "tdbank",
+      "category": "Home Improvement",
+      "type": "expenses",
+      "notes": "Toaster Oven",
+      "id": 10
+    }
+  ]
 }
