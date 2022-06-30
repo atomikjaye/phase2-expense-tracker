@@ -37,6 +37,7 @@ function AddForm({ onNewTrans }) {
 
     const newTransaction = {
       date: date,
+      company: company,
       amount: parseFloat(amount),
       account: account,
       category: category,
@@ -102,7 +103,7 @@ function AddForm({ onNewTrans }) {
         control={DatePicker}
         name='date'
         selected={date}
-        onChange={(date: Date) => setDate(date)}
+        onChange={(date) => setDate(date)}
       />
       <Form.Field>
         <label htmlFor="company">Company</label>

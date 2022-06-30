@@ -10,11 +10,15 @@ import trackData from "./db.json"
 import './App.css';
 
 function App() {
-  const [transactionList, setTransactionList] = useState(trackData)
+  const [transactionList, setTransactionList] = useState(trackData.transactions)
+
   useEffect(() => {
     fetch(`http://localhost:3001/transactions`)
       .then(r => r.json())
-      .then(data => setTransactionList(data))
+      .then(data => {
+        setTransactionList(data)
+        console.log(transactionList)
+      })
   }, [])
 
 
@@ -29,7 +33,7 @@ function App() {
       <Container >
         <Routes>
           <Route path="/" element={<Dashboard data={trackData} />} />
-          <Route path="transactions" element={<TransactionPage />} />
+          <Route path="transactions" element={<TransactionPage transList={transactionList} />} />
           <Route path="form" element={<AddForm onNewTrans={addTransaction} transactionList={transactionList} setTransactionList={setTransactionList} />} />
         </Routes>
       </Container>
