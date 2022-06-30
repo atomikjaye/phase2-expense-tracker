@@ -14,7 +14,7 @@
       "account": "TD Bank",
       "category": "Clothing",
       "type": "Expense",
-      "Notes": "This was for Gucci Shirt",
+      "notes": "This was for Gucci Shirt",
       "Tags": [
         "Clothing",
         "Social",
@@ -29,7 +29,7 @@
       "account": "Chase (Credit)",
       "category": "Shoes",
       "type": "Expense",
-      "Notes": "This was for Gucci Shirt",
+      "notes": "This was for Gucci Shirt",
       "Tags": [
         "Shoes",
         "Nike Original"
@@ -43,7 +43,7 @@
       "account": "TD Bank",
       "category": "Food",
       "type": "Expense",
-      "Notes": "This was for Happy Meal Deluxe",
+      "notes": "This was for Happy Meal Deluxe",
       "Tags": []
     },
     {
@@ -54,7 +54,7 @@
       "account": "TD Bank",
       "category": "Car Expense",
       "type": "Expense",
-      "Notes": "Transmission"
+      "notes": "Transmission"
     },
     {
       "id": 5,
@@ -64,7 +64,7 @@
       "account": "TD Bank",
       "category": "Job",
       "type": "Income",
-      "Notes": "I worked 40hrs"
+      "notes": "I worked 40hrs"
     },
     {
       "id": 6,
