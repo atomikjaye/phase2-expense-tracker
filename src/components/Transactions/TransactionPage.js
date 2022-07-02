@@ -13,14 +13,13 @@ function TransactionPage({ transList }) {
     return <Transaction
       key={trans.id}
       id={trans.id}
-      // date={trans.date}
+      date={moment(trans.date).format('MM/DD/YY')}
       company={trans.company}
       amount={trans.amount}
       type={trans.type}
       account={trans.account}
       category={trans.category}
       notes={trans.notes}
-      date={moment(trans.date).format('MM/DD/YY')}
     />
   })
   return (
