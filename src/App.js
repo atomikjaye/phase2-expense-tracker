@@ -29,6 +29,18 @@ function App() {
     setTransactionList(newTransactions)
   }
 
+  // function handleEdit(trans, id) {
+  //   fetch(`http://localhost:3001/transactions/${id}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(trans)
+  //   })
+  //     .then(r => r.json())
+  //     .then(data => console.log(data))
+  // }
+
   return (
     <>
       <Navbar />

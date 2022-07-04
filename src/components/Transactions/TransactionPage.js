@@ -1,14 +1,16 @@
 // import DashDisplay from './DashDisplay';
 import { Table } from 'semantic-ui-react'
-import TransactionFilter from './TransactionFilter'
 import Transaction from './Transaction'
+import TransactionHeader from './TransactionHeader'
 import moment from 'moment'
-import Moment from 'react-moment'
 import 'moment-timezone'
 
-function TransactionPage({ transList }) {
+function TransactionPage({ transList, handleEdit }) {
   console.log(transList)
-  const transToDisplay = transList.sort((currTrans, prevTrans) => { return moment(currTrans.date).diff(moment(prevTrans.date)) })
+  const transToDisplay = transList.sort((currTrans, prevTrans) => {
+    return moment(currTrans.date).diff(moment(prevTrans.date))
+  }
+  )
   console.log("TRANS", transToDisplay)
   const displayTrans = transToDisplay.map((trans) => {
     // console.log("Hi")
@@ -22,6 +24,7 @@ function TransactionPage({ transList }) {
       account={trans.account}
       category={trans.category}
       notes={trans.notes}
+      handleEdit={handleEdit}
     />
   })
   console.log("TRANS", displayTrans)
@@ -32,17 +35,7 @@ function TransactionPage({ transList }) {
     <>
       {/* <TransactionFilter /> */}
       <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Date</Table.HeaderCell>
-            <Table.HeaderCell>Company</Table.HeaderCell>
-            <Table.HeaderCell>Amount</Table.HeaderCell>
-            <Table.HeaderCell>Type</Table.HeaderCell>
-            <Table.HeaderCell>Account</Table.HeaderCell>
-            <Table.HeaderCell>Category</Table.HeaderCell>
-            <Table.HeaderCell>Notes</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
+        <TransactionHeader />
         <Table.Body>
           {displayTrans}
         </Table.Body>
