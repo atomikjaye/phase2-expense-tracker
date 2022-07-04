@@ -21,11 +21,11 @@ export default class Navbar extends Component {
         // active={activeItem === 'friends'}
         // onClick={this.handleItemClick}
         />
-        <Menu.Menu position='right'>
+        {/* <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
           </Menu.Item>
-        </Menu.Menu>
+        </Menu.Menu> */}
       </Menu>
     )
   }
