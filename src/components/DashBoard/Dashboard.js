@@ -40,7 +40,7 @@ function Dashboard({ data }) {
   return (
     <>
       <Container textAlign='center'>
-        <Header as='h1'>Jocelyn's Expense Tracker</Header>
+        <Header as='h1'>Expense Tracker</Header>
         <Card.Group centered grid>
           <DashDisplay title={"Income"} btnColor={"green"} linkName={"/income"} displayAmount={totalIncome} />
           <DashDisplay title={"Expenses"} btnColor={"red"} linkName={"/expenses"} displayAmount={totalExpenses} />

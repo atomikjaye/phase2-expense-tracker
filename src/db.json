@@ -147,7 +147,7 @@
       "account": "chase",
       "category": "Freelance",
       "type": "expenses",
-      "notes": "dsdff",
+      "notes": "4th of July Outfit",
       "id": 15
     },
     {
@@ -159,6 +159,16 @@
       "type": "expenses",
       "notes": "Bought Iced Tea",
       "id": 16
+    },
+    {
+      "date": "2022-07-04T19:08:58.322Z",
+      "company": "Fiverr",
+      "amount": 500,
+      "account": "tdbank",
+      "category": "Freelance",
+      "type": "income",
+      "notes": "Graphic design for John",
+      "id": 17
     }
   ]
 }

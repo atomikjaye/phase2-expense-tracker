@@ -7,7 +7,7 @@ function Transaction({ id, date, company, amount, type, account, category, notes
       <Table.Cell>{company}</Table.Cell>
       <Table.Cell>{"$" + amount.toFixed(2)}</Table.Cell>
       <Table.Cell>{type.charAt(0).toUpperCase() + type.slice(1)}</Table.Cell>
-      <Table.Cell>{account === "tdbank" ? "TD Bank" : "Chase"}</Table.Cell>
+      <Table.Cell>{account === "tdbank" ? "Debit" : "Credit"}</Table.Cell>
       <Table.Cell>{category}</Table.Cell>
       <Table.Cell>{notes}</Table.Cell>
       {/* // handle edit, redirect to filled out Form page. */}

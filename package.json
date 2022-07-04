@@ -19,6 +19,9 @@
     "semantic-ui-react": "^2.1.3",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "server": "json-server --watch ./src/db.json --port 3001",
