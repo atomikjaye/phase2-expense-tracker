@@ -1,12 +1,12 @@
 // Dashboard will contain overviews of money
 import DashDisplay from './DashDisplay';
 import Transaction from '../Transactions/Transaction'
+import TransactionHeader from '../Transactions/TransactionHeader'
 // src/components/DashBoard/Dashboard.js
 // src/components/Transactions/Transaction.js
 import moment from 'moment'
-import Moment from 'react-moment'
 import 'moment-timezone'
-import { Button, Card, Image, Container, Header, Table, Divider, Icon } from 'semantic-ui-react'
+import { Card, Container, Header, Table, Divider, Icon } from 'semantic-ui-react'
 // Total Income recieved, total expenses, total left.
 // must get from database
 function Dashboard({ data }) {
@@ -58,17 +58,7 @@ function Dashboard({ data }) {
 
         {/* <TransactionFilter /> */}
         <Table celled>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell>Date</Table.HeaderCell>
-              <Table.HeaderCell>Company</Table.HeaderCell>
-              <Table.HeaderCell>Amount</Table.HeaderCell>
-              <Table.HeaderCell>Type</Table.HeaderCell>
-              <Table.HeaderCell>Account</Table.HeaderCell>
-              <Table.HeaderCell>Category</Table.HeaderCell>
-              <Table.HeaderCell>Notes</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
+          <TransactionHeader />
           <Table.Body>
             {displayTrans}
           </Table.Body>

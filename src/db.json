@@ -1,10 +1,4 @@
 {
-  "income": {
-    "total": 1000000
-  },
-  "expenses": {
-    "total": 8500
-  },
   "transactions": [
     {
       "date": "2022-06-16T07:26:45.000Z",
@@ -155,6 +149,16 @@
       "type": "expenses",
       "notes": "dsdff",
       "id": 15
+    },
+    {
+      "date": "2022-06-29T06:14:50.000Z",
+      "company": "Wawa",
+      "amount": 2.4,
+      "account": "tdbank",
+      "category": "Groceries",
+      "type": "expenses",
+      "notes": "Bought Iced Tea",
+      "id": 16
     }
   ]
 }

@@ -1,8 +1,8 @@
 import Transaction from '../Transactions/Transaction'
 import TransactionFilter from '../Transactions/TransactionFilter'
+import TransactionHeader from './TransactionHeader'
 import { Table } from 'semantic-ui-react'
 import moment from 'moment'
-import Moment from 'react-moment'
 import 'moment-timezone'
 
 function Expenses({ data }) {
@@ -21,23 +21,14 @@ function Expenses({ data }) {
         notes={trans.notes}
       />
     }
+    // return "Nothing found"
   })
 
   return (
     <>
-      <TransactionFilter />
+      {/* <TransactionFilter /> */}
       <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Date</Table.HeaderCell>
-            <Table.HeaderCell>Company</Table.HeaderCell>
-            <Table.HeaderCell>Amount</Table.HeaderCell>
-            <Table.HeaderCell>Type</Table.HeaderCell>
-            <Table.HeaderCell>Account</Table.HeaderCell>
-            <Table.HeaderCell>Category</Table.HeaderCell>
-            <Table.HeaderCell>Notes</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
+        <TransactionHeader />
         <Table.Body>
           {displayTrans}
         </Table.Body>

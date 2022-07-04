@@ -27,10 +27,10 @@ function AddForm({ onNewTrans }) {
   // const [tags, setTags] = useState('')
 
   // https://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
-  const formatter = new Intl.NumberFormat('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
+  // const formatter = new Intl.NumberFormat('en-US', {
+  //   minimumFractionDigits: 2,
+  //   maximumFractionDigits: 2,
+  // });
 
   function handleSubmit(e) {
     e.preventDefault()
