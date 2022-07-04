@@ -56,9 +56,15 @@ function AddForm({ onNewTrans }) {
       .then(data => console.log(data))
 
     console.log("New Trans", newTransaction)
-  }
 
-  function addNewTransaction() {
+    setDate(new Date())
+    setCompany("")
+    setAmount(0)
+    setType('income')
+    setAccount('tdbank')
+    setCategory('Amazon')
+    setNotes("")
+
   }
 
   // have to use semantic's data object

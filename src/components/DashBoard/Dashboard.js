@@ -10,9 +10,20 @@ import { Button, Card, Image, Container, Header, Table, Divider, Icon } from 'se
 // Total Income recieved, total expenses, total left.
 // must get from database
 function Dashboard({ data }) {
-  console.log(data.income.total)
-  const displayTrans = data.transactions.map((trans) => {
-    console.log("Hi")
+
+  const totalExpensesTrans = data.transactions.filter(trans => trans.type === 'expenses')
+  const totalIncomeTrans = data.transactions.filter(trans => trans.type === 'income')
+
+
+  const totalIncome = Object.values(totalIncomeTrans).reduce((prev, { amount }) => prev + amount, 0)
+  const totalExpenses = Object.values(totalExpensesTrans).reduce((prev, { amount }) => prev + amount, 0)
+
+  // console.log("Total Income", totalIncome)
+  // console.log("Total Expenses", totalExpenses)
+  // console.log(data.income.total)
+  let transactions = data.transactions.slice(-10)
+  const displayTrans = transactions.map((trans) => {
+    // console.log("Hi")
     return <Transaction
       key={trans.id}
       id={trans.id}
@@ -29,21 +40,38 @@ function Dashboard({ data }) {
   return (
     <>
       <Container textAlign='center'>
-
+        <Header as='h1'>Jocelyn's Expense Tracker</Header>
         <Card.Group centered grid>
-          <DashDisplay title={"Income"} btnColor={"green"} displayAmount={data.income.total} />
-          <DashDisplay title={"Expenses"} btnColor={"red"} displayAmount={data.expenses.total} />
-          <DashDisplay title={"Balance"} btnColor={"orange"} displayAmount={data.income.total - data.expenses.total} />
+          <DashDisplay title={"Income"} btnColor={"green"} linkName={"/income"} displayAmount={totalIncome} />
+          <DashDisplay title={"Expenses"} btnColor={"red"} linkName={"/expenses"} displayAmount={totalExpenses} />
+          <DashDisplay title={"Balance"} btnColor={"orange"} linkName={"/"} displayAmount={totalIncome - totalExpenses} />
         </Card.Group>
+
         <Divider horizontal>
+
           <Header as='h4'>
             <Icon name='tag' />
             Recent Transactions
           </Header>
         </Divider>
 
-        <Table>
-          {displayTrans}
+
+        {/* <TransactionFilter /> */}
+        <Table celled>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell>Date</Table.HeaderCell>
+              <Table.HeaderCell>Company</Table.HeaderCell>
+              <Table.HeaderCell>Amount</Table.HeaderCell>
+              <Table.HeaderCell>Type</Table.HeaderCell>
+              <Table.HeaderCell>Account</Table.HeaderCell>
+              <Table.HeaderCell>Category</Table.HeaderCell>
+              <Table.HeaderCell>Notes</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {displayTrans}
+          </Table.Body>
         </Table>
 
 

@@ -8,8 +8,10 @@ import 'moment-timezone'
 
 function TransactionPage({ transList }) {
   console.log(transList)
-  const displayTrans = transList.map((trans) => {
-    console.log("Hi")
+  const transToDisplay = transList.sort((currTrans, prevTrans) => { return moment(currTrans.date).diff(moment(prevTrans.date)) })
+  console.log("TRANS", transToDisplay)
+  const displayTrans = transToDisplay.map((trans) => {
+    // console.log("Hi")
     return <Transaction
       key={trans.id}
       id={trans.id}
@@ -22,9 +24,13 @@ function TransactionPage({ transList }) {
       notes={trans.notes}
     />
   })
+  console.log("TRANS", displayTrans)
+
+
+
   return (
     <>
-      <TransactionFilter />
+      {/* <TransactionFilter /> */}
       <Table celled>
         <Table.Header>
           <Table.Row>
@@ -41,7 +47,7 @@ function TransactionPage({ transList }) {
           {displayTrans}
         </Table.Body>
       </Table>
-      <p>TRANSACTION PAGE</p>
+      {/* <p>TRANSACTION PAGE</p> */}
     </>
   )
 }

@@ -12,7 +12,6 @@ function Transaction({ id, date, company, amount, type, account, category, notes
       <Table.Cell>{notes}</Table.Cell>
     </Table.Row>
   )
-
 }
 
 export default Transaction
