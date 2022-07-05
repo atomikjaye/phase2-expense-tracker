@@ -17,4 +17,4 @@
 6. On the `Dashboard` page, you can view just expenses or income by clicking the buttons under the numbers. You're balance is also shown on the right.
 
 ### Future Updates
-This is a barebones app right now, more features will be added. To view those features, check out our blog post here [link soon]!
+This is a barebones app right now, more features will be added. To view those features, check out our blog post [here](https://dev.to/atomikjaye/expense-tracker-to-dos-2ih9)!
